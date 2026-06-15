@@ -32,22 +32,38 @@ class Calculadora:
 
         if operacion == 'sumar':
             resultado = numero_1 + numero_2
+
         elif operacion == 'restar':
             resultado = numero_1 - numero_2
+
         elif operacion == 'multiplicar':
              resultado = numero_1 * numero_2
+        
+       
         elif operacion == 'dividir':
             if numero_2 == 0:
-             resultado = numero_1 / numero_2
-            else:
                 resultado = "Error: división entre cero"
-        elif operacion == 'modulo':
+            else:
+             resultado = numero_1 / numero_2
+       
+        elif operacion == 'modulo': 
             resultado = numero_1 % numero_2
+        
         elif operacion == 'raiz_cuadrada':
             if numero_1 >= 0:
              resultado = numero_1 ** 0.5
+
+        elif operacion == 'potencia':
+             resultado = numero_1 ** numero_2
+
+        elif operacion == 'limpiar':
+            numero_1 = 0.0
+            numero_2 = 0.0
+            resultado = 0.0
+        
         else:
             resultado = "Error: número negativo"
+   
 
         return render.calculadora(numero_1, numero_2, resultado)
     
